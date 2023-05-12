@@ -1,5 +1,5 @@
 export enum AWSAccountIDs {
-  SandBox1 = "",
+  DevOrgTest = "896653224309",
 }
 
 export const MainRegion = "eu-west-1"
