@@ -5,6 +5,7 @@ import { DocumentDBStack } from './stacks/document-db-stack';
 import { SsmManagedBastionStack } from './stacks/ssm-managed-bastion-no-internet-stack';
 import { OpenSearchStack } from './stacks/opensearch-stack';
 import { ClientVpnStack } from './stacks/clientvpn-stack';
+import { DMSStack } from './stacks/dms-stack';
 
 export const app = new cdk.App();
 
@@ -15,6 +16,10 @@ const network = new NetworkStack(app, 'network-devorg-sem', {
 new DocumentDBStack(app, 'documentdb-sem', {
   env: {account: awsConfig.AWSAccountIDs.DevOrgTest, region: awsConfig.MainRegion},
   vpc: network.vpc
+})
+
+new DMSStack(app, 'dms-devorg-sem', {
+  env: {account: awsConfig.AWSAccountIDs.DevOrgTest, region: awsConfig.MainRegion},
 })
 
 new SsmManagedBastionStack(app, 'managed-bastion-devorg-sem', {
