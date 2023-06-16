@@ -25,6 +25,7 @@ new DocumentDBStack(app, 'documentdb-sem', {
 
 new DMSStack(app, 'dms-devorg-sem', {
   env: {account: awsConfig.AWSAccountIDs.DevOrgTest, region: awsConfig.MainRegion},
+  vpc: network.vpc
 })
 
 new SsmManagedBastionStack(app, 'managed-bastion-devorg-sem', {
