@@ -1,0 +1,12 @@
+{
+  "name": "cdk-test-app",
+  "version": "1.0.0",
+  "description": "cdk app",
+  "main": "src/main.ts",
+  "author": "Sem-at-home <vanveldensem@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "aws-cdk-lib": "^2.179.0"
+  }
+}

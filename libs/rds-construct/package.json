@@ -1,0 +1,14 @@
+{
+  "name": "lib",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "types": "src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "aws-cdk-lib": "2.179.0"
+  }
+}
